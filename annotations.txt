@@ -1,0 +1,15 @@
+thumbs_up/img004.jpg	thumbs up
+thumbs_up/img005.jpg	thumbs up
+thumbs_up/img001.jpg	thumbs up
+thumbs_up/img002.jpg	thumbs up
+thumbs_up/img003.jpg	thumbs up
+fist/img004.jpg	fist
+fist/img005.jpg	fist
+fist/img001.jpg	fist
+fist/img002.jpg	fist
+fist/img003.jpg	fist
+palm/img004.jpg	palm
+palm/img005.jpg	palm
+palm/img001.jpg	palm
+palm/img002.jpg	palm
+palm/img003.jpg	palm
