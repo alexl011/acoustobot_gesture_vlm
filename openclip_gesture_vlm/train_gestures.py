@@ -8,7 +8,7 @@ from torch import nn, optim
 
 # --- 1. Configuration ---
 annotations_file = './annotations.txt'
-image_dir = './dataset'
+image_dir = '../dataset'
 output_probe_path = './gesture_model.pt'
 output_mapping_path = './class_mapping.json'
 

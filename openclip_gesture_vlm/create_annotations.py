@@ -1,9 +1,9 @@
 import os
 
 # The root directory of your dataset
-root_dir = 'acoustobot_gesture_vlm/dataset'
+root_dir = '../dataset'
 # The name of the output annotation file
-output_file = 'acoustobot_gesture_vlm/annotations.txt'
+output_file = './annotations.txt'
 
 # A list to hold all the image-label pairs
 annotations = []
