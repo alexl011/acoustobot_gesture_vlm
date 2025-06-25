@@ -1,13 +1,28 @@
+thumbs_up/img008.jpg	thumbs up
+thumbs_up/img009.jpg	thumbs up
+thumbs_up/img007.jpg	thumbs up
+thumbs_up/img006.jpg	thumbs up
+thumbs_up/img010.jpg	thumbs up
 thumbs_up/img004.jpg	thumbs up
 thumbs_up/img005.jpg	thumbs up
 thumbs_up/img001.jpg	thumbs up
 thumbs_up/img002.jpg	thumbs up
 thumbs_up/img003.jpg	thumbs up
+fist/img008.jpg	fist
+fist/img009.jpg	fist
+fist/img007.jpg	fist
+fist/img006.jpg	fist
+fist/img010.jpg	fist
 fist/img004.jpg	fist
 fist/img005.jpg	fist
 fist/img001.jpg	fist
 fist/img002.jpg	fist
 fist/img003.jpg	fist
+palm/img008.jpg	palm
+palm/img009.jpg	palm
+palm/img007.jpg	palm
+palm/img006.jpg	palm
+palm/img010.jpg	palm
 palm/img004.jpg	palm
 palm/img005.jpg	palm
 palm/img001.jpg	palm
