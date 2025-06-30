@@ -1,15 +1,33 @@
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-96_29245.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-99_29942.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-95_62577.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-97_42140.jpg	thumbs up
 thumbs_up/img008.jpg	thumbs up
 thumbs_up/img009.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-93_28721.jpg	thumbs up
 thumbs_up/img007.jpg	thumbs up
 thumbs_up/img006.jpg	thumbs up
 thumbs_up/img010.jpg	thumbs up
 thumbs_up/img004.jpg	thumbs up
 thumbs_up/img005.jpg	thumbs up
 thumbs_up/img001.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-94_50408.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-9_40278.jpg	thumbs up
 thumbs_up/img002.jpg	thumbs up
 thumbs_up/img003.jpg	thumbs up
+thumbs_up/gesture-thumbUp-2021-03-07_23-07-54-98_42972.jpg	thumbs up
+fist/gesture-fist-2021-03-07_23-07-50-375_15521.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-368_4594.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-371_55350.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-370_32750.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-373_32943.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-376_56776.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-374_42268.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-369_36425.jpg	fist
 fist/img008.jpg	fist
 fist/img009.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-372_51639.jpg	fist
+fist/gesture-fist-2021-03-07_23-07-50-367_56893.jpg	fist
 fist/img007.jpg	fist
 fist/img006.jpg	fist
 fist/img010.jpg	fist
@@ -18,13 +36,25 @@ fist/img005.jpg	fist
 fist/img001.jpg	fist
 fist/img002.jpg	fist
 fist/img003.jpg	fist
+palm/gesture-five-2021-03-07_23-07-49-98_44403.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-96_8972.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-97_30363.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-91_39971.jpg	palm
 palm/img008.jpg	palm
 palm/img009.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-9_44602.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-95_27710.jpg	palm
 palm/img007.jpg	palm
 palm/img006.jpg	palm
 palm/img010.jpg	palm
 palm/img004.jpg	palm
 palm/img005.jpg	palm
 palm/img001.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-94_3400.jpg	palm
 palm/img002.jpg	palm
 palm/img003.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-92_38438.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-99_54268.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-90_47520.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-93_25553.jpg	palm
+palm/gesture-five-2021-03-07_23-07-49-8_41607.jpg	palm
