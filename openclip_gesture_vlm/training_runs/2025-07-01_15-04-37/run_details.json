@@ -1,0 +1,25 @@
+{
+    "run_timestamp": "2025-07-01_15-04-37",
+    "config": {
+        "annotations_file": "./annotations.txt",
+        "image_dir": "/Users/alexlin/COMP0234_iot_project/acoustobot_gesture_vlm/dataset",
+        "runs_dir": "/Users/alexlin/COMP0234_iot_project/acoustobot_gesture_vlm/openclip_gesture_vlm/training_runs",
+        "model_name": "ViT-B-32-quickgelu",
+        "pretrained_dataset": "openai",
+        "num_epochs": 50,
+        "batch_size": 5,
+        "learning_rate": 0.001,
+        "validation_split": 0.2,
+        "random_seed": 42
+    },
+    "dataset_statistics": {
+        "total_images": 180,
+        "training_images": 144,
+        "validation_images": 36,
+        "gesture_counts": {
+            "thumbs up": 60,
+            "fist": 60,
+            "palm": 60
+        }
+    }
+}
