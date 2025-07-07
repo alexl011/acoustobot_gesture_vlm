@@ -72,12 +72,12 @@ const int numMonaRobots = 1;
 int Monas[numMonaRobots];
 
 int main() {
-    // Initialize Winsock
     WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2,2), &wsaData) != 0) {
         printf("WSAStartup failed.\n");
         return 1;
     }
+
     // Setup UDP receive socket
     sockPhaseSpace = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if (sockPhaseSpace == INVALID_SOCKET) { perror("socket creation failed"); WSACleanup(); exit(1); }
@@ -107,19 +107,15 @@ int main() {
 
     printf("Listening for tracking data on UDP port %d. Press keys to send commands. Press x to exit.\n", PORT);
 
-    // Tracking positions for robot and object
-    float robot_pos[3] = {std::numeric_limits<float>::quiet_NaN(),
-                          std::numeric_limits<float>::quiet_NaN(),
-                          std::numeric_limits<float>::quiet_NaN()};
-    float object_pos[3] = {std::numeric_limits<float>::quiet_NaN(),
-                           std::numeric_limits<float>::quiet_NaN(),
-                           std::numeric_limits<float>::quiet_NaN()};
+    float robot_pos[3] = {NAN, NAN, NAN};
+    float object_pos[3] = {NAN, NAN, NAN};
+    float robot_heading = NAN;
     const char* ROBOT_TRACKER_NAME = "AcoustoBot1";
     const char* OBJECT_TRACKER_NAME = "User1";
-    const float REACH_THRESHOLD = 0.05f; // 5 cm
+    const float REACH_THRESHOLD = 0.05f;
+    const float ANGLE_THRESHOLD = 10.0f;
 
     while (1) {
-        // Non-blocking receive using select
         fd_set readfds;
         FD_ZERO(&readfds);
         FD_SET(sockPhaseSpace, &readfds);
@@ -133,9 +129,11 @@ int main() {
                 char* parsingIndex = recvBuff;
                 int numTrackers = *((int*)parsingIndex);
                 parsingIndex += sizeof(int);
-                // Reset positions to NaN for this frame
-                robot_pos[0] = robot_pos[1] = robot_pos[2] = std::numeric_limits<float>::quiet_NaN();
-                object_pos[0] = object_pos[1] = object_pos[2] = std::numeric_limits<float>::quiet_NaN();
+
+                robot_pos[0] = robot_pos[1] = robot_pos[2] = NAN;
+                object_pos[0] = object_pos[1] = object_pos[2] = NAN;
+                robot_heading = NAN;
+
                 for (int t = 0; t < numTrackers; t++) {
                     char trackerName[33] = {0};
                     memcpy(trackerName, parsingIndex, 32);
@@ -143,47 +141,59 @@ int main() {
                     TrackerState curState;
                     memcpy(&curState, parsingIndex, sizeof(TrackerState));
                     parsingIndex += sizeof(TrackerState);
+
                     printf("Tracker: %s | Pos: (%.3f, %.3f, %.3f) | Heading: %.2f\n",
                         trackerName, curState.position[0], curState.position[1], curState.position[2], curState.headingY);
+
                     if (strcmp(trackerName, ROBOT_TRACKER_NAME) == 0) {
                         memcpy(robot_pos, curState.position, sizeof(robot_pos));
+                        robot_heading = curState.headingY;
                     }
                     if (strcmp(trackerName, OBJECT_TRACKER_NAME) == 0) {
                         memcpy(object_pos, curState.position, sizeof(object_pos));
                     }
                 }
-                // After parsing all trackers, check if both positions are valid
-                if (!std::isnan(robot_pos[0]) && !std::isnan(object_pos[0])) {
+
+                if (!std::isnan(robot_pos[0]) && !std::isnan(object_pos[0]) && !std::isnan(robot_heading)) {
                     float dx = object_pos[0] - robot_pos[0];
                     float dy = object_pos[1] - robot_pos[1];
-                    float dz = object_pos[2] - robot_pos[2];
-                    float dist = std::sqrt(dx*dx + dy*dy + dz*dz);
-                    if (dist > REACH_THRESHOLD) {
-                        // Move robot forward
-                        udp.sendByte('F', Monas[0]);
-                        printf("Moving robot towards object. Distance: %.3f\n", dist);
-                    } else {
-                        // Stop the robot
+                    float dist = std::sqrt(dx * dx + dy * dy);
+                    float desired_heading = atan2(dy, dx) * 180.0f / M_PI;
+
+                    float heading_error = desired_heading - robot_heading;
+                    while (heading_error > 180.0f) heading_error -= 360.0f;
+                    while (heading_error < -180.0f) heading_error += 360.0f;
+
+                    if (dist <= REACH_THRESHOLD) {
                         udp.sendByte('S', Monas[0]);
                         printf("Robot reached the object!\n");
+                    } else if (std::abs(heading_error) > ANGLE_THRESHOLD) {
+                        if (heading_error > 0)
+                            udp.sendByte('L', Monas[0]);
+                        else
+                            udp.sendByte('R', Monas[0]);
+                        printf("Turning robot (error %.2f°)...\n", heading_error);
+                    } else {
+                        udp.sendByte('F', Monas[0]);
+                        printf("Moving forward. Distance: %.3f, Heading error: %.2f\n", dist, heading_error);
                     }
                 }
             }
         }
-        // Keyboard input
+
         if (_kbhit()) {
             int c = _getch();
             if (c == 'x' || c == 'X') break;
-            // Example: send command to all robots
             for (int i = 0; i < numMonaRobots; i++) {
                 udp.sendByte((unsigned char)c, Monas[i]);
             }
             printf("Sent command '%c' to all robots.\n", c);
         }
     }
+
     closesocket(sockPhaseSpace);
     udp.disconnect();
     WSACleanup();
     printf("Exited.\n");
     return 0;
-} 
+}
