@@ -1,5 +1,5 @@
 {
-    "run_timestamp": "2025-06-25_14-52-43",
+    "run_timestamp": "2025-07-09_14-54-24",
     "config": {
         "annotations_file": "./annotations.txt",
         "image_dir": "/Users/alexlin/COMP0234_iot_project/acoustobot_gesture_vlm/dataset",
@@ -13,13 +13,13 @@
         "random_seed": 42
     },
     "dataset_statistics": {
-        "total_images": 30,
-        "training_images": 24,
-        "validation_images": 6,
+        "total_images": 790,
+        "training_images": 632,
+        "validation_images": 158,
         "gesture_counts": {
-            "thumbs up": 10,
-            "fist": 10,
-            "palm": 10
+            "thumbs up": 205,
+            "fist": 310,
+            "palm": 275
         }
     }
 }
