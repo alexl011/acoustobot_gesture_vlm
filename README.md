@@ -42,7 +42,7 @@ The project leverages a pre-trained Vision Transformer (ViT-B-32) from OpenCLIP 
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 ### Current Dataset Statistics
 - **Total Images**: 790
@@ -128,7 +128,7 @@ This creates `gesture_model.onnx` optimized for inference.
 
 
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Gestures
 
@@ -138,7 +138,7 @@ This creates `gesture_model.onnx` optimized for inference.
 4. **Update Inference**: Modify class mappings in inference scripts
 
 
-## 📚 References
+## References
 
 - [OpenCLIP Repository](https://github.com/mlfoundations/open_clip)
 - [CLIP Paper](https://arxiv.org/abs/2103.00020)
