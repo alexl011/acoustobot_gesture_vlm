@@ -3,7 +3,7 @@
 
 ### Overview
 
-This project implements a real-time gesture recognition system using OpenCLIP (Contrastive Language-Image Pre-training) for controlling acoustophoretic interactions with AcoustoBots. The system combines computer vision and machine learning to enable intuitive gesture-based control.
+This project implements a real-time gesture recognition system using OpenCLIP (Contrastive Language-Image Pre-training) for controlling acoustophoretic interactions with AcoustoBots. The system combines computer vision and machine learning to enable intuitive gesture-based control. <a href="https://alexl011.github.io/acoustobot_gesture_vlm/UCL_SEIoT_MSc_Project_Gesture_Based_Multi_Agent.pdf">mypdf</a>
 
 The project leverages a pre-trained Vision Transformer (ViT-B-32) from OpenCLIP and fine-tunes it with a linear probe classifier to recognize three distinct hand gestures: **thumbs up**, **fist**, and **palm**.
 
