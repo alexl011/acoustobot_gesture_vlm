@@ -20,7 +20,7 @@ The project leverages a pre-trained Vision Transformer (ViT-B-32) from OpenCLIP 
 
 1. **Clone the repository** (if not already done):
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/alexl011/acoustobot_gesture_vlm.git
    cd acoustobot_gesture_vlm
    ```
 
