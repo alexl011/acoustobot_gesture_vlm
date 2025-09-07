@@ -126,7 +126,7 @@ python export_to_onnx.py
 
 This creates `gesture_model.onnx` optimized for inference.
 
-
+---
 
 ## Customization
 
