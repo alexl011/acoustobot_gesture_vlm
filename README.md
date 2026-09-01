@@ -143,3 +143,6 @@ This creates `gesture_model.onnx` optimized for inference.
 - [OpenCLIP Repository](https://github.com/mlfoundations/open_clip)
 - [CLIP Paper](https://arxiv.org/abs/2103.00020)
 - [Vision Transformer Paper](https://arxiv.org/abs/2010.11929)
+
+## Citation:
+Lin, A., Gao, L., Kemsaram, N., & Subramanian, S. (2026). **A Gesture-Based Visual Learning Model for Acoustophoretic Interactions using a Swarm of AcoustoBots**. Proceedings of the 2026 4th International Conference on Robotics, Control and Vision Engineering (RCVE 2026), 2026. arXiv:2604.19643, doi: 10.48550/arXiv.2604.19643.
